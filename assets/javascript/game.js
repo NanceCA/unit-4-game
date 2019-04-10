@@ -20,12 +20,13 @@ var userScore4 = 0;
 //function start game
 
 //this initial function displays random numbers
-var counter = 0;
 var userScore = 0;
 
 startGame();
 
 function startGame() {
+    var counter = 0;
+
     displayRandom = Math.floor(Math.random() * 120) + 1;
     console.log(displayRandom);
     $("#display2User").text(displayRandom); //get element by ID that the user will try to play against
@@ -43,14 +44,14 @@ function startGame() {
     var crystalcounter4 = Math.floor(Math.random() * 120) + 19;
     console.log(crystalcounter4)
 
-    var crys1 = $("#crystal1").on("click", function () {
-        userScore1 = counter += crystalcounter1;
+    var crys1 = $(".crystalimage").on("click", function () {
+        counter += crystalcounter1;
         return userScore1;
 
     });
 
     var crys2 = $("#crystal2").on("click", function () {
-        userScore2 = counter += crystalcounter2;
+        counter += crystalcounter2;
         return userScore2;
     });
 
