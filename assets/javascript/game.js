@@ -58,5 +58,12 @@ function startGame() {
     userScore = crys1 + crys2;
     $("#userScore").text(userScore); // Clicking the button writes the score to the DOM
     console.log("the total userscore is" + userScore);
+    if (userScore === displayRandom) {
+        alert("YOU WIN!")
+    }
+    else if (userScore > displayRandom) {
+        alert("Sorry you lose")
+        return;
+    }
 
 };
